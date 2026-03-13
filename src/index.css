@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  /* === BLACK & GOLD THEME === */
+  --color-bg: #0a0a0a;
+  --color-bg-2: #111111;
+  --color-bg-card: #141414;
+  --color-bg-elevated: #1a1a1a;
+  --color-gold: #FFB800;
+  --color-gold-hover: #ffc93c;
+  --color-gold-dim: rgba(255, 184, 0, 0.12);
+  --color-white: #ffffff;
+  --color-body: #a0a0a0;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-gold: rgba(255, 184, 0, 0.3);
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+  --transition: 0.3s ease;
+  --radius: 12px;
+  --shadow-gold: 0 0 30px rgba(255, 184, 0, 0.15);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-body);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ── Section Utilities ── */
+.rn-section-gap {
+  padding: 100px 0;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ── Section Title ── */
+.section-tag {
+  display: inline-block;
+  background: var(--color-gold-dim);
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 4px;
+  border: 1px solid var(--color-border-gold);
+  margin-bottom: 16px;
+}
+
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 900;
+  color: var(--color-white);
+  text-transform: uppercase;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.section-heading span {
+  color: var(--color-gold);
+}
+
+/* ── Gold Button ── */
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-gold);
+  color: #000;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.btn-gold:hover {
+  background: var(--color-gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 184, 0, 0.4);
+}
+
+/* ── Outline Button ── */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 13px 28px;
+  border-radius: 50px;
+  border: 1px solid rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
+/* ── Golden divider line ── */
+.gold-line {
+  width: 60px;
+  height: 3px;
+  background: var(--color-gold);
+  margin: 16px 0 32px 0;
+}
+
+/* ── Dark Card ── */
+.dark-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.dark-card:hover {
+  border-color: var(--color-border-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0a0a; }
+::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 4px; }
+
+/* ── White version override (removed, all dark now) ── */
+.white-version {
+  background-color: var(--color-bg);
+}

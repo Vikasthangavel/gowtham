@@ -1,0 +1,233 @@
+import profileImg from '../assets/images/Gowtham-01.jpg';
+
+const SocialBtn = ({ href, color, icon, label }) => (
+  <a href={href} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
+    <button className={`about-btn about-btn--${color}`} title={label}>
+      {icon}
+      <span>{label}</span>
+    </button>
+  </a>
+);
+
+export default function About() {
+  return (
+    <section id="about" className="rn-section-gap" style={{ background: '#0d0d0d', borderTop: '1px solid rgba(255,255,255,0.04)' }}>
+      <style>{`
+        .about-wrapper {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 0 40px;
+        }
+        .about-section-hdr {
+          margin-bottom: 60px;
+        }
+        .about-layout {
+          display: grid;
+          grid-template-columns: 300px 1fr;
+          gap: 60px;
+          align-items: start;
+        }
+        .about-img-col {
+          position: relative;
+        }
+        .about-img-box {
+          border-radius: 16px;
+          overflow: hidden;
+          position: relative;
+          aspect-ratio: 3/4;
+        }
+        .about-img-box img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+        .about-img-box::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.7));
+        }
+        .about-img-frame {
+          position: absolute;
+          top: -10px;
+          right: -10px;
+          width: 100%;
+          height: 100%;
+          border: 2px solid rgba(255,184,0,0.25);
+          border-radius: 16px;
+          pointer-events: none;
+        }
+        .about-content {}
+        .about-name {
+          font-family: 'Montserrat', sans-serif;
+          font-size: clamp(32px, 4vw, 52px);
+          font-weight: 900;
+          color: #fff;
+          text-transform: uppercase;
+          letter-spacing: -1px;
+          line-height: 1;
+          margin-bottom: 6px;
+        }
+        .about-name span { color: #FFB800; }
+        .about-role-tag {
+          display: inline-block;
+          background: rgba(255,184,0,0.1);
+          border: 1px solid rgba(255,184,0,0.2);
+          color: #FFB800;
+          font-family: 'Montserrat', sans-serif;
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          padding: 5px 14px;
+          border-radius: 4px;
+          margin-bottom: 24px;
+        }
+        .about-gold-bar {
+          width: 50px;
+          height: 3px;
+          background: #FFB800;
+          margin-bottom: 24px;
+        }
+        .about-bio {
+          font-size: 15px;
+          line-height: 1.9;
+          color: rgba(255,255,255,0.55);
+          text-align: justify;
+          margin-bottom: 32px;
+        }
+        .about-info-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 16px;
+          margin-bottom: 32px;
+        }
+        .about-info-item {}
+        .about-info-label {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          color: #FFB800;
+          text-transform: uppercase;
+          margin-bottom: 4px;
+        }
+        .about-info-value {
+          font-size: 14px;
+          font-weight: 500;
+          color: rgba(255,255,255,0.8);
+        }
+        .about-btns {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+        .about-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          padding: 9px 16px;
+          border-radius: 8px;
+          border: none;
+          font-size: 12px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 700;
+          cursor: pointer;
+          transition: all 0.3s;
+          color: white;
+          letter-spacing: 0.5px;
+        }
+        .about-btn--whatsapp { background: #25D366; }
+        .about-btn--whatsapp:hover { background: #128C7E; transform: translateY(-2px); }
+        .about-btn--instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .about-btn--instagram:hover { opacity: 0.9; transform: translateY(-2px); }
+        .about-btn--facebook { background: #3B5997; }
+        .about-btn--facebook:hover { background: #2d4373; transform: translateY(-2px); }
+        .about-btn--twitter { background: #111; border: 1px solid rgba(255,255,255,0.15); }
+        .about-btn--twitter:hover { background: #222; transform: translateY(-2px); }
+        .about-btn--snapchat { background: #FFFC00; color: #000; }
+        .about-btn--snapchat:hover { background: #f0ec00; transform: translateY(-2px); }
+        .about-btn--linkedin { background: #0077B5; }
+        .about-btn--linkedin:hover { background: #005c8a; transform: translateY(-2px); }
+        .about-btn--resume { background: #FFB800; color: #000; }
+        .about-btn--resume:hover { background: #ffc93c; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255,184,0,0.4); }
+        @media (max-width: 768px) {
+          .about-layout { grid-template-columns: 1fr; gap: 40px; }
+          .about-wrapper { padding: 0 20px; }
+          .about-img-box { max-width: 250px; margin: 0 auto; aspect-ratio: 1; }
+          .about-info-grid { grid-template-columns: 1fr; }
+          .about-name { text-align: center; }
+          .about-bio { text-align: left; }
+        }
+      `}</style>
+
+      <div className="about-wrapper">
+        <div className="about-section-hdr" data-aos="fade-up" data-aos-duration="600">
+          <div className="section-tag">About Me</div>
+          <h2 className="section-heading">Who <span>Am I</span></h2>
+        </div>
+
+        <div className="about-layout">
+          <div className="about-img-col" data-aos="fade-right" data-aos-duration="700">
+            <div className="about-img-box">
+              <img src={profileImg} alt="Gowtham's profile picture" />
+            </div>
+            <div className="about-img-frame" />
+          </div>
+
+          <div className="about-content" data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+            <h2 className="about-name">Gowtham <span>J</span></h2>
+            <span className="about-role-tag">Full-Stack Developer</span>
+            <div className="about-gold-bar" />
+            <p className="about-bio">
+              Passionate and dedicated web developer with a strong focus on creating responsive,
+              user-friendly web applications. Experienced in developing innovative solutions to
+              enhance workflows and improve business processes. Looking to leverage my skills in a
+              challenging role where I can contribute to building dynamic and scalable web applications.
+            </p>
+
+            <div className="about-info-grid">
+              <div className="about-info-item">
+                <div className="about-info-label">Location</div>
+                <div className="about-info-value">Tamil Nadu, India</div>
+              </div>
+              <div className="about-info-item">
+                <div className="about-info-label">Experience</div>
+                <div className="about-info-value">2+ Years</div>
+              </div>
+              <div className="about-info-item">
+                <div className="about-info-label">Stack</div>
+                <div className="about-info-value">MERN / PHP</div>
+              </div>
+              <div className="about-info-item">
+                <div className="about-info-label">Availability</div>
+                <div className="about-info-value" style={{ color: '#22c55e' }}>Open to Work</div>
+              </div>
+            </div>
+
+            <div className="about-btns">
+              <SocialBtn href="https://wa.me/9360248850" color="whatsapp" label="Whatsapp"
+                icon={<svg viewBox="0 0 16 16" height="1.1em" fill="currentColor"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326z"/></svg>}
+              />
+              <SocialBtn href="https://www.instagram.com/aesthetic__kadhalan/" color="instagram" label="Instagram"
+                icon={<svg viewBox="0 0 448 512" height="1.1em" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8z"/></svg>}
+              />
+              <SocialBtn href="https://www.facebook.com/gowtham.shah.1" color="facebook" label="Facebook"
+                icon={<svg viewBox="0 0 16 16" height="1.1em" fill="currentColor"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>}
+              />
+              <SocialBtn href="https://x.com/gowtham_shah" color="twitter" label="Twitter"
+                icon={<svg viewBox="0 0 16 16" height="1.1em" fill="currentColor"><path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75z"/></svg>}
+              />
+              <SocialBtn href="https://www.linkedin.com/in/gowtham-j-1917g/" color="linkedin" label="Linkedin"
+                icon={<svg viewBox="0 0 16 16" height="1.1em" fill="currentColor"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>}
+              />
+              <SocialBtn href="/resume/Gowtham J Resume.pdf" color="resume" label="Resume"
+                icon={<svg viewBox="0 0 16 16" height="1.1em" fill="currentColor"><path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0m2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755"/></svg>}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
