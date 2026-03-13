@@ -27,36 +27,113 @@ export default function About() {
           gap: 60px;
           align-items: start;
         }
+        /* ── Editorial photo col ── */
         .about-img-col {
           position: relative;
+          display: flex;
+          gap: 14px;
+          align-items: stretch;
         }
+        /* Vertical side label */
+        .about-img-side {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 16px;
+          padding: 8px 0;
+          flex-shrink: 0;
+        }
+        .about-side-line {
+          flex: 1;
+          width: 1px;
+          background: linear-gradient(to bottom, transparent, rgba(255,184,0,0.35), transparent);
+        }
+        .about-side-text {
+          writing-mode: vertical-rl;
+          transform: rotate(180deg);
+          font-family: 'Montserrat', sans-serif;
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 4px;
+          text-transform: uppercase;
+          color: rgba(255,255,255,0.2);
+          white-space: nowrap;
+        }
+        .about-side-dot {
+          width: 5px; height: 5px;
+          border-radius: 50%;
+          background: #FFB800;
+          flex-shrink: 0;
+        }
+        /* Main photo box */
         .about-img-box {
-          border-radius: 16px;
-          overflow: hidden;
           position: relative;
+          flex: 1;
+          overflow: hidden;
+          clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
           aspect-ratio: 3/4;
         }
         .about-img-box img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+          object-position: top;
+          filter: contrast(1.06) saturate(0.8) brightness(0.9);
+          transition: transform 0.7s cubic-bezier(0.16,1,0.3,1);
         }
-        .about-img-box::after {
+        .about-img-col:hover .about-img-box img {
+          transform: scale(1.04);
+        }
+        /* Film grain overlay */
+        .about-img-box::before {
           content: '';
           position: absolute;
           inset: 0;
-          background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.7));
-        }
-        .about-img-frame {
-          position: absolute;
-          top: -10px;
-          right: -10px;
-          width: 100%;
-          height: 100%;
-          border: 2px solid rgba(255,184,0,0.25);
-          border-radius: 16px;
+          z-index: 2;
+          opacity: 0.04;
+          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+          background-size: 180px;
           pointer-events: none;
         }
+        /* Bottom gradient */
+        .about-img-box::after {
+          content: '';
+          position: absolute;
+          bottom: 0; left: 0; right: 0;
+          height: 50%;
+          background: linear-gradient(to top, rgba(13,13,13,0.75) 0%, transparent 100%);
+          z-index: 1;
+          pointer-events: none;
+        }
+        /* Year stamp badge */
+        .about-img-stamp {
+          position: absolute;
+          bottom: 18px;
+          left: 16px;
+          z-index: 3;
+          display: flex;
+          flex-direction: column;
+        }
+        .about-stamp-year {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 11px;
+          font-weight: 900;
+          letter-spacing: 3px;
+          color: rgba(255,255,255,0.75);
+          line-height: 1;
+        }
+        .about-stamp-role {
+          font-family: 'Montserrat', sans-serif;
+          font-size: 8px;
+          font-weight: 700;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: #FFB800;
+          margin-top: 3px;
+        }
+        /* Old frame — now unused, kept for no-op */
+        .about-img-frame { display: none; }
         .about-content {}
         .about-name {
           font-family: 'Montserrat', sans-serif;
@@ -154,7 +231,8 @@ export default function About() {
         @media (max-width: 768px) {
           .about-layout { grid-template-columns: 1fr; gap: 40px; }
           .about-wrapper { padding: 0 20px; }
-          .about-img-box { max-width: 250px; margin: 0 auto; aspect-ratio: 1; }
+          .about-img-col { max-width: 280px; margin: 0 auto; }
+          .about-img-box { aspect-ratio: 3/4; clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%); }
           .about-info-grid { grid-template-columns: 1fr; }
           .about-name { text-align: center; }
           .about-bio { text-align: left; }
@@ -169,9 +247,25 @@ export default function About() {
 
         <div className="about-layout">
           <div className="about-img-col" data-aos="fade-right" data-aos-duration="700">
-            <div className="about-img-box">
-              <img src={profileImg} alt="Gowtham's profile picture" />
+            {/* Side label strip */}
+            <div className="about-img-side">
+              <div className="about-side-line" />
+              <div className="about-side-dot" />
+              <span className="about-side-text">Full-Stack Developer</span>
+              <div className="about-side-dot" />
+              <div className="about-side-line" />
             </div>
+
+            {/* Photo with angled cut */}
+            <div className="about-img-box">
+              <img src={profileImg} alt="Gowtham" />
+              {/* Stamp on photo */}
+              <div className="about-img-stamp">
+                <span className="about-stamp-year">SINCE 2022</span>
+                <span className="about-stamp-role">Web Developer</span>
+              </div>
+            </div>
+
             <div className="about-img-frame" />
           </div>
 
