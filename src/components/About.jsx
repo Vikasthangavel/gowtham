@@ -1,4 +1,4 @@
-import profileImg from '../assets/images/Gowtham-01.jpg';
+import profileImg from '../assets/images/image2.jpeg';
 
 const SocialBtn = ({ href, color, icon, label }) => (
   <a href={href} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
@@ -287,11 +287,7 @@ export default function About() {
               </div>
               <div className="about-info-item">
                 <div className="about-info-label">Experience</div>
-                <div className="about-info-value">2+ Years</div>
-              </div>
-              <div className="about-info-item">
-                <div className="about-info-label">Stack</div>
-                <div className="about-info-value">MERN / PHP</div>
+                <div className="about-info-value">4+ Years</div>
               </div>
               <div className="about-info-item">
                 <div className="about-info-label">Availability</div>
@@ -303,7 +299,7 @@ export default function About() {
               <SocialBtn href="https://wa.me/9360248850" color="whatsapp" 
                 icon={<svg viewBox="0 0 16 16" height="1.1em" fill="currentColor"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326z"/></svg>}
               />
-              <SocialBtn href="https://www.instagram.com/aesthetic__kadhalan/" color="instagram" 
+              <SocialBtn href="https://www.instagram.com/mr_gowthammm/" color="instagram" 
                 icon={<svg viewBox="0 0 448 512" height="1.1em" fill="currentColor"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8z"/></svg>}
               />
               <SocialBtn href="https://www.facebook.com/gowtham.shah.1" color="facebook" 

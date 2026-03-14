@@ -199,7 +199,7 @@ export default function Contact() {
               <div className="contact-icon">✉️</div>
               <div className="contact-info-text">
                 <div className="contact-info-label">Email</div>
-                <div className="contact-info-value"><a href="mailto:gowthamj1917@gmail.com">gowthamj1917@gmail.com</a></div>
+                <div className="contact-info-value"><a href="mailto:gowthamjayaram333@gmail.com">gowthamjayaram333@gmail.com</a></div>
               </div>
             </div>
             <div className="contact-info-item">
@@ -217,16 +217,16 @@ export default function Contact() {
                 <div className="form-row">
                   <div className="form-group">
                     <label htmlFor="name">Your Name</label>
-                    <input id="name" name="name" type="text" required placeholder="John Doe" />
+                    <input id="name" name="name" type="text" required placeholder="Enter Your Name" />
                   </div>
                   <div className="form-group">
                     <label htmlFor="phone">Phone Number</label>
-                    <input id="phone" name="phone" type="tel" maxLength="10" required placeholder="+91 XXXXXXXXXX" />
+                    <input id="phone" name="phone" type="tel" maxLength="10" required placeholder="Enter Your Phone Number" />
                   </div>
                 </div>
                 <div className="form-group full">
                   <label htmlFor="_replyto">Email Address</label>
-                  <input id="_replyto" name="_replyto" type="email" required placeholder="john@example.com" />
+                  <input id="_replyto" name="_replyto" type="email" required placeholder="Enter Your Email Address" />
                 </div>
                 <div className="form-group full" style={{ marginBottom: '28px' }}>
                   <label htmlFor="message">Your Message</label>

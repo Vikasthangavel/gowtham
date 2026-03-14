@@ -1,9 +1,11 @@
 // Project images
-import hospitalImg from '../assets/project/Hospital.png';
+import nexyugaImg from '../assets/project/nexyuga.png';
+import gradixImg from '../assets/project/gradix.png';
+import commonManImg from '../assets/project/commonman.png';
+import adInnovantImg from '../assets/project/AD.png';
 import echodigiImg from '../assets/project/Echodigiworks.png';
 import uccashTourismImg from '../assets/project/uccash tourism.jpg';
 import greensImg from '../assets/project/Greens.png';
-import uccashFoundImg from '../assets/project/uccash foundation.jpg';
 import svcImg from '../assets/project/svc.png';
 import pranavaImg from '../assets/project/pranava.jpg';
 import webthroneImg from '../assets/project/Webthrone tech.jpg';
@@ -14,17 +16,21 @@ import aghavanImg from '../assets/project/aghavan.jpg';
 import aghanImg from '../assets/project/aghan.jpg';
 
 const projects = [
-  { id: 2, img: echodigiImg, title: 'Echo Digital Works', url: 'https://echodigitalworks.in/', tag: 'Agency', desc: 'Full digital agency website with services, portfolio, and contact sections featuring modern design.' },
-  { id: 3, img: uccashTourismImg, title: 'Uccash Tourism', url: 'https://uccashtourism.com/', tag: 'Travel', desc: 'Tourism platform showcasing travel packages, destinations, and booking capabilities.' },
-  { id: 4, img: greensImg, title: 'Greens Technologies', url: 'https://cloudgt.in/', tag: 'Tech', desc: 'Tech company website with service offerings, team profiles, and project showcases.' },
-  { id: 6, img: svcImg, title: 'Sri Vishnu Communications', url: 'https://www.srivishnucommunications.com/', tag: 'Telecom', desc: 'Telecom services website with service plans, coverage maps, and contact forms.' },
-  { id: 7, img: pranavaImg, title: 'Pranava Catering', url: 'https://pranava.netlify.app/', tag: 'Food', desc: 'Catering service website with menu showcases, event gallery, and inquiry forms.' },
-  { id: 8, img: webthroneImg, title: 'Webthrone Technologies', url: 'https://webthronetech.netlify.app/', tag: 'Tech', desc: 'Web technology company for digital solutions, hosting, and web development services.' },
-  { id: 9, img: highlightsImg, title: 'Highlights Makeover', url: 'https://www.highlights-makeover-artistry.in/', tag: 'Beauty', desc: 'Beauty salon website with service listings, portfolio gallery, and appointment booking.' },
-  { id: 10, img: foreverImg, title: 'Forever Finds', url: 'https://forever-find.netlify.app/', tag: 'E-Commerce', desc: 'E-commerce platform for unique products with cart, filters, and smooth shopping UX.' },
-  { id: 11, img: jbsImg, title: 'Jayalakshmi Borewells', url: 'https://jayalakshmiborewells.netlify.app/', tag: 'Services', desc: 'Borewell services website with project portfolio and quick contact functionality.' },
-  { id: 12, img: aghavanImg, title: 'Aghavan Foundation', url: 'https://aghavan.org/', tag: 'NGO', desc: 'Foundation website for social welfare initiatives with events and volunteer registration.' },
-  { id: 13, img: aghanImg, title: 'Aghan Promoters', url: 'https://testing-aghan.netlify.app/', tag: 'Real Estate', desc: 'Real estate promoters website with property listings, enquiry forms, and location maps.' },
+  { id: 2, img: nexyugaImg, title: 'Nexyuga', url: 'https://nexyuga.in/', tag: 'Company', desc: 'Company portfolio website built with a modern design, showcasing services, team, and company vision.' },
+  { id: 0, img: gradixImg, title: 'Gradix Technologies', url: 'https://gradixtech.com/', tag: 'Tech', desc: 'Technology company website showcasing web development services, portfolio, and digital solutions.' },
+  { id: 1, img: commonManImg, title: 'Common Man', url: 'https://the-commonman.com/home/', tag: 'Brand', desc: 'Brand website with a clean modern design showcasing products, story, and customer engagement.' },
+  { id: 3, img: adInnovantImg, title: 'AD Innovant Media', url: 'https://adinnovantmedia.netlify.app/', tag: 'Media', desc: 'Digital media and advertising agency website with services, campaigns, and creative portfolio.' },
+  { id: 4, img: echodigiImg, title: 'Echo Digital Works', url: 'https://echodigitalworks.in/', tag: 'Agency', desc: 'Full digital agency website with services, portfolio, and contact sections featuring modern design.' },
+  { id: 6, img: uccashTourismImg, title: 'Uccash Tourism', url: 'https://uccashtourism.com/', tag: 'Travel', desc: 'Tourism platform showcasing travel packages, destinations, and booking capabilities.' },
+  { id: 7, img: greensImg, title: 'Greens Technologies', url: 'https://cloudgt.in/', tag: 'Tech', desc: 'Tech company website with service offerings, team profiles, and project showcases.' },
+  { id: 8, img: svcImg, title: 'Sri Vishnu Communications', url: 'https://www.srivishnucommunications.com/', tag: 'Telecom', desc: 'Telecom services website with service plans, coverage maps, and contact forms.' },
+  { id: 5, img: pranavaImg, title: 'Pranava Catering', url: 'https://pranava.netlify.app/', tag: 'Food', desc: 'Catering service website with menu showcases, event gallery, and inquiry forms.' },
+  { id: 9, img: webthroneImg, title: 'Webthrone Technologies', url: 'https://webthronetech.netlify.app/', tag: 'Tech', desc: 'Web technology company for digital solutions, hosting, and web development services.' },
+  { id: 10, img: highlightsImg, title: 'Highlights Makeover', url: 'https://www.highlights-makeover-artistry.in/', tag: 'Beauty', desc: 'Beauty salon website with service listings, portfolio gallery, and appointment booking.' },
+  { id: 11, img: foreverImg, title: 'Forever Finds', url: 'https://forever-find.netlify.app/', tag: 'E-Commerce', desc: 'E-commerce platform for unique products with cart, filters, and smooth shopping UX.' },
+  { id: 12, img: jbsImg, title: 'Jayalakshmi Borewells', url: 'https://jayalakshmiborewells.netlify.app/', tag: 'Services', desc: 'Borewell services website with project portfolio and quick contact functionality.' },
+  { id: 13, img: aghavanImg, title: 'Aghavan Foundation', url: 'https://aghavan.org/', tag: 'NGO', desc: 'Foundation website for social welfare initiatives with events and volunteer registration.' },
+  { id: 14, img: aghanImg, title: 'Aghan Promoters', url: 'https://testing-aghan.netlify.app/', tag: 'Real Estate', desc: 'Real estate promoters website with property listings, enquiry forms, and location maps.' },
 ];
 
 function ProjectCard({ proj, index }) {
@@ -363,11 +369,11 @@ export default function Projects() {
           <h2 className="section-heading">My <span>Projects</span></h2>
           <div className="projects-stats">
             <div className="stat-item">
-              <span className="stat-num">13+</span>
+              <span className="stat-num">15+</span>
               <span className="stat-label">Projects<br/>Completed</span>
             </div>
             <div className="stat-item">
-              <span className="stat-num">2+</span>
+              <span className="stat-num">4+</span>
               <span className="stat-label">Years of<br/>Experience</span>
             </div>
             <div className="stat-item">
@@ -378,9 +384,11 @@ export default function Projects() {
         </div>
 
         <div className="projects-grid">
-          {projects.map((proj, i) => (
-            <ProjectCard key={proj.id} proj={proj} index={i} />
-          ))}
+          {[...new Map(projects.map(p => [p.id, p])).values()]
+            .sort((a, b) => a.id - b.id)
+            .map((proj, i) => (
+              <ProjectCard key={proj.id} proj={proj} index={i} />
+            ))}
         </div>
       </div>
     </section>

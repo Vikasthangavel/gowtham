@@ -89,7 +89,7 @@ export default function Footer() {
         .footer-bottom {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: center;
           gap: 16px;
           flex-wrap: wrap;
         }
@@ -138,7 +138,7 @@ export default function Footer() {
             <div className="footer-col-title">Contact</div>
             <div className="footer-contact-list">
               <div className="footer-contact-item"><a href="tel:+919360248850">+91 93602 48850</a></div>
-              <div className="footer-contact-item"><a href="mailto:gowthamj1917@gmail.com">gowthamj1917@gmail.com</a></div>
+              <div className="footer-contact-item"><a href="mailto:gowthamjayaram333@gmail.com">gowthamjayaram333@gmail.com</a></div>
               <div className="footer-contact-item">Tamil Nadu, India</div>
             </div>
           </div>
@@ -147,7 +147,6 @@ export default function Footer() {
           <p className="footer-copy">
             © {new Date().getFullYear()} <a href="https://gowthamj.netlify.app/" target="_blank" rel="noreferrer">Gowtham J</a>. All rights reserved.
           </p>
-          <p className="footer-made">Designed & Developed with ❤️</p>
         </div>
       </div>
     </footer>
