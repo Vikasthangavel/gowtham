@@ -18,7 +18,7 @@ const experience = [
   {
     title: 'Founder',
     company: 'Gradix Technologies',
-    period: 'March 2026 – Present',
+    period: 'January 2026 – Present',
     companyLink: 'https://gradixtech.com/',
     desc: 'Working as a Web Developer at Gradix Technologies, contributing to web development projects and building scalable web solutions.',
   },

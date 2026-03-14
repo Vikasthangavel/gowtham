@@ -490,14 +490,34 @@ export default function Hero() {
             frontends to robust backend systems. Every line of code is intentional.
           </p>
 
-          {/* CTA */}
-          <div className="hero-cta-row seq seq-6">
-            <a href="/resume/Gowtham J Resume.pdf" download="Mr Gowtham Resume.pdf" className="cta-primary">
+          {/* Resume download with existence check */}
+          <div style={{ position: 'relative' }} className="seq seq-6">
+            <button
+              className="cta-primary"
+              onClick={async () => {
+                const url = '/resume/Gowtham J Resume.pdf';
+                try {
+                  const res = await fetch(url, { method: 'HEAD' });
+                  if (res.ok) {
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'Gowtham J Resume.pdf';
+                    a.click();
+                  } else {
+                    alert('Resume will be available soon. Please check back later!');
+                  }
+                } catch {
+                  alert('Resume will be available soon. Please check back later!');
+                }
+              }}
+            >
               Download CV
               <svg width="14" height="14" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"/>
               </svg>
-            </a>
+            </button>
+          </div>
+          <div className="seq seq-6" style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap', marginBottom: '52px', marginTop: '-52px', paddingTop: '0' }}>
             <span className="cta-secondary"
               onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}>
               See my work →

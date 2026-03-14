@@ -277,10 +277,11 @@ export default function About() {
             <span className="about-role-tag">Full-Stack Developer</span>
             <div className="about-gold-bar" />
             <p className="about-bio">
-              Passionate and dedicated web developer with a strong focus on creating responsive,
-              user-friendly web applications. Experienced in developing innovative solutions to
-              enhance workflows and improve business processes. Looking to leverage my skills in a
-              challenging role where I can contribute to building dynamic and scalable web applications.
+            Passionate and dedicated web developer focused on building responsive, 
+            user-friendly web applications and custom software solutions for businesses. 
+            Experienced in developing innovative systems that streamline workflows and improve
+            business processes. Seeking opportunities to leverage my skills to design and 
+            develop dynamic, scalable applications tailored to business needs.
             </p>
 
             <div className="about-info-grid">
