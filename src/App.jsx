@@ -28,7 +28,6 @@ export default function App() {
       <main style={{ paddingTop: '70px' }}>
         <Hero />
         <About />
-        <Certification />
         <Projects />
         <Skills />
         <Resume />

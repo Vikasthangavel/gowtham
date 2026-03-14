@@ -14,11 +14,9 @@ import aghavanImg from '../assets/project/aghavan.jpg';
 import aghanImg from '../assets/project/aghan.jpg';
 
 const projects = [
-  { id: 1, img: hospitalImg, title: 'Demo Hospital Website', url: 'https://demo-hospital-site.netlify.app/', tag: 'Healthcare', desc: 'A clean and professional hospital website with appointment booking, department pages, and doctor showcases.' },
   { id: 2, img: echodigiImg, title: 'Echo Digital Works', url: 'https://echodigitalworks.in/', tag: 'Agency', desc: 'Full digital agency website with services, portfolio, and contact sections featuring modern design.' },
   { id: 3, img: uccashTourismImg, title: 'Uccash Tourism', url: 'https://uccashtourism.com/', tag: 'Travel', desc: 'Tourism platform showcasing travel packages, destinations, and booking capabilities.' },
   { id: 4, img: greensImg, title: 'Greens Technologies', url: 'https://cloudgt.in/', tag: 'Tech', desc: 'Tech company website with service offerings, team profiles, and project showcases.' },
-  { id: 5, img: uccashFoundImg, title: 'Uccash Foundation', url: 'https://uccashfoundation.com/', tag: 'NGO', desc: 'Non-profit foundation website for charitable work with donation and awareness campaigns.' },
   { id: 6, img: svcImg, title: 'Sri Vishnu Communications', url: 'https://www.srivishnucommunications.com/', tag: 'Telecom', desc: 'Telecom services website with service plans, coverage maps, and contact forms.' },
   { id: 7, img: pranavaImg, title: 'Pranava Catering', url: 'https://pranava.netlify.app/', tag: 'Food', desc: 'Catering service website with menu showcases, event gallery, and inquiry forms.' },
   { id: 8, img: webthroneImg, title: 'Webthrone Technologies', url: 'https://webthronetech.netlify.app/', tag: 'Tech', desc: 'Web technology company for digital solutions, hosting, and web development services.' },

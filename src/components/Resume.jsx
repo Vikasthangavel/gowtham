@@ -11,19 +11,14 @@ const education = [
     meta: 'FITA Academy, Coimbatore',
     score: null,
   },
-  {
-    degree: 'HSC',
-    desc: 'Mahakavi Matric Hr.Sec School (2019 - 2020)',
-    meta: null,
-    score: '60%',
-  },
+
 ];
 
 const experience = [
   {
-    title: 'Web Developer',
+    title: 'Founder',
     company: 'Gradix Technologies',
-    period: '09-03-2026 – Present',
+    period: 'March 2026 – Present',
     companyLink: 'https://gradixtech.com/',
     desc: 'Working as a Web Developer at Gradix Technologies, contributing to web development projects and building scalable web solutions.',
   },
