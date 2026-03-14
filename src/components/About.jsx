@@ -238,7 +238,7 @@ export default function About() {
           .about-img-box { aspect-ratio: 3/4; clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%); }
           .about-info-grid { grid-template-columns: 1fr; }
           .about-name { text-align: center; }
-          .about-bio { text-align: left; }
+          .about-bio { text-align: justify; }
         }
       `}</style>
 
