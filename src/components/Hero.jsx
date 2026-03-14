@@ -490,8 +490,8 @@ export default function Hero() {
             frontends to robust backend systems. Every line of code is intentional.
           </p>
 
-          {/* Resume download with existence check */}
-          <div style={{ position: 'relative' }} className="seq seq-6">
+          {/* CTA Row */}
+          <div className="hero-cta-row seq seq-6">
             <button
               className="cta-primary"
               onClick={async () => {
@@ -516,8 +516,6 @@ export default function Hero() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"/>
               </svg>
             </button>
-          </div>
-          <div className="seq seq-6" style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap', marginBottom: '52px', marginTop: '-52px', paddingTop: '0' }}>
             <span className="cta-secondary"
               onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}>
               See my work →
