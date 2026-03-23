@@ -4,6 +4,7 @@ import gradixImg from '../assets/project/gradix.png';
 import commonManImg from '../assets/project/commonman.png';
 import adInnovantImg from '../assets/project/AD.png';
 import planetBrandingsImg from '../assets/project/planetbrandings.png';
+import medicitytImg from '../assets/project/medicity.png';
 import echodigiImg from '../assets/project/Echodigiworks.png';
 import uccashTourismImg from '../assets/project/uccash tourism.jpg';
 import greensImg from '../assets/project/Greens.png';
@@ -19,9 +20,10 @@ import aghanImg from '../assets/project/aghan.jpg';
 const projects = [
   { id: 2, img: nexyugaImg, title: 'Nexyuga', url: 'https://nexyuga.in/', tag: 'Company', desc: 'Company portfolio website built with a modern design, showcasing services, team, and company vision.' },
   { id: 0, img: gradixImg, title: 'Gradix Technologies', url: 'https://gradixtech.com/', tag: 'Tech', desc: 'Technology company website showcasing web development services, portfolio, and digital solutions.' },
-  { id: 1, img: commonManImg, title: 'Common Man', url: 'https://the-commonman.com/home/', tag: 'Brand', desc: 'Brand website with a clean modern design showcasing products, story, and customer engagement.' },
+  { id: 1, img: commonManImg, title: 'Common Man', url: 'https://the-commonman.com/', tag: 'Brand', desc: 'Brand website with a clean modern design showcasing products, story, and customer engagement.' },
   { id: 4, img: adInnovantImg, title: 'AD Innovant Media', url: 'https://adinnovantmedia.netlify.app/', tag: 'Media', desc: 'Digital media and advertising agency website with services, campaigns, and creative portfolio.' },
   { id: 5, img: echodigiImg, title: 'Echo Digital Works', url: 'https://echodigitalworks.in/', tag: 'Agency', desc: 'Full digital agency website with services, portfolio, and contact sections featuring modern design.' },
+  { id: 6, img: medicitytImg, title: 'Demo Hospital Site', url: 'https://demo-hospital-site.netlify.app/', tag: 'Healthcare', desc: 'A clean and professional hospital website with appointment booking, department pages, and doctor showcases.' },
   { id: 7, img: uccashTourismImg, title: 'Uccash Tourism', url: 'https://uccashtourism.com/', tag: 'Travel', desc: 'Tourism platform showcasing travel packages, destinations, and booking capabilities.' },
   { id: 8, img: greensImg, title: 'Greens Technologies', url: 'https://cloudgt.in/', tag: 'Tech', desc: 'Tech company website with service offerings, team profiles, and project showcases.' },
   { id: 9, img: svcImg, title: 'Sri Vishnu Communications', url: 'https://www.srivishnucommunications.com/', tag: 'Telecom', desc: 'Telecom services website with service plans, coverage maps, and contact forms.' },
